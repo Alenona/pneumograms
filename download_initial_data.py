@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 
-genders = pd.read_csv('C:/Users/aleng/Downloads/пневмограммы/пневмограммы/genders.txt', delimiter='\t')
+genders = pd.read_csv('пневмограммы/пневмограммы/genders.txt', delimiter='\t')
 genders = genders.rename(columns={'№': 'number', 'Пол': 'gender'})
 genders['gender'] = genders['gender'].replace({'м': 0, 'ж': 1})
 
@@ -12,12 +12,12 @@ columns = ["filename", "state", "gender", "signal"]
 df = pd.DataFrame(columns=columns)
 
 
-files = os.listdir('C:/Users/aleng/Downloads/пневмограммы/пневмограммы/покой')
+files = os.listdir('пневмограммы/пневмограммы/покой')
 for file in files:
     if file.endswith(".txt"):
         num_str = os.path.splitext(file)[0][1:].replace('п', '')
         num = int(num_str)
-        with open(os.path.join('C:/Users/aleng/Downloads/пневмограммы/пневмограммы/покой', file), 'r') as f:
+        with open(os.path.join('пневмограммы/пневмограммы/покой', file), 'r') as f:
             data = f.readlines()
         data = np.array([float(line.strip().replace(',', '.')) for line in data])
         row = pd.DataFrame({
@@ -30,12 +30,12 @@ for file in files:
         df = pd.concat([df, row], ignore_index=True)
 
 
-files = os.listdir('C:/Users/aleng/Downloads/пневмограммы/пневмограммы/тревога')
+files = os.listdir('пневмограммы/пневмограммы/тревога')
 for file in files:
     if file.endswith(".txt"):
         num_str = os.path.splitext(file)[0][1:].replace('т', '')
         num = int(num_str)
-        with open(os.path.join('C:/Users/aleng/Downloads/пневмограммы/пневмограммы/тревога', file), 'r') as f:
+        with open(os.path.join('пневмограммы/пневмограммы/тревога', file), 'r') as f:
             data = f.readlines()
         data = np.array([float(line.strip().replace(',', '.')) for line in data])
         row = pd.DataFrame({
