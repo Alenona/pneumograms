@@ -11,3 +11,5 @@ Parquet-файл со всеми исходными данными: initial_data
 **Ансамбль CNN и XGBoost с аугментацией, применением feature_extraction и кросс-валидацией**: final_model_with_cv
 
 **Итоговые точности**: results.csv
+
+**Графики для признаков**: visualization.ipynb
