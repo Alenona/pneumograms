@@ -1,0 +1,4 @@
+,feature,RandomForest,Ridge,GradientBoosting,Svc
+0,hilbert,0.6,0.525,0.5375,0.5875
+1,CWT,0.65,0.5625,0.5125,0.525
+2,mfcc,0.575,0.6000000000000001,0.525,0.575
