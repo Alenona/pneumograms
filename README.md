@@ -4,20 +4,10 @@
 
 Parquet-файл со всеми исходными данными: initial_data.parquet
 
+**Аугментация данных**: data_augmentation
 
-**Вычисление характеристик**:
+**Вычисление характеристик**: feature_extraction
 
-Преобразование Фурье: FFT Characteristics.py -> FFT_Characteristics.parquet
+**Ансамбль CNN и XGBoost с аугментацией, применением feature_extraction и кросс-валидацией**: final_model_with_cv
 
-Вейвлет-преобразование: CWT_Characteristics.py -> CWT_Characteristics.parquet
-
-MFCC: MFCC.py -> MFCC.parquet
-
-Аппроксимация спектра: spec approximation.py -> spec_approximation.parquet
-
-
-**Таблица со всеми характеристиками**: total_features.py -> total_features.parquet
-
-**Обучение моделей**: models_state.py, models_gender.py
-
-**Итоговые точности**: accuracies_state.csv, accuracies_gender.csv
+**Итоговые точности**: results.csv
