@@ -1,0 +1,5 @@
+,model,accuracy
+0,XGB with LeaveOneOutCV,0.9
+1,XGB 5-fold Clf,0.875
+2,CNN 5-fold Clf,0.8375
+3,Ensemble 5-fold Clf,0.9125
